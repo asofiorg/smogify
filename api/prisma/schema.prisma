@@ -1,0 +1,26 @@
+datasource db {
+    provider = "postgresql"
+    url      = env("DB")
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+model Report {
+    id        String   @id @default(cuid())
+    lat       Float
+    lng       Float
+    smog      Boolean
+    uuid      String
+    User      User     @relation(fields: [uuid], references: [uuid])
+    createdAt DateTime @default(now())
+}
+
+model User {
+    id        String   @id @default(cuid())
+    uuid      String   @unique
+    name      String?
+    createdAt DateTime @default(now())
+    reports   Report[]
+}
