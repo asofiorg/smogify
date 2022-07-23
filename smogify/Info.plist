@@ -6,10 +6,6 @@
 	<array>
 		<string></string>
 	</array>
-	<key>item 1</key>
-	<string>UberMoveMedium.otf</string>
-	<key>item 0</key>
-	<string>UberMoveBold.otf</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -29,5 +25,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>item 0</key>
+	<string>UberMoveBold.otf</string>
+	<key>item 1</key>
+	<string>UberMoveMedium.otf</string>
 </dict>
 </plist>

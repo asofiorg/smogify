@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         animationView.play(fromProgress: 0, toProgress: 1, loopMode: .loop)

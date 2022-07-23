@@ -9,15 +9,19 @@ import UIKit
 
 class LogInViewController: UIViewController {
 
+    @IBOutlet weak var continueButton: UIButton!
     @IBAction func continuePressed(_ sender: Any) {
         performSegue(withIdentifier: "logInToMain", sender: self)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUI()
         // Do any additional setup after loading the view.
     }
     
+    func setUI(){
+        continueButton.layer.cornerRadius = 15
+    }
 
     /*
     // MARK: - Navigation

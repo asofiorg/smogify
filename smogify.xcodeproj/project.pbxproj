@@ -24,6 +24,9 @@
 		72AA761C288BA91A00E1E1D8 /* UberMoveMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 72AA761A288BA91A00E1E1D8 /* UberMoveMedium.otf */; };
 		72AA761E288BAC2600E1E1D8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA761D288BAC2600E1E1D8 /* LogInViewController.swift */; };
 		72AA7620288BAC3200E1E1D8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA761F288BAC3200E1E1D8 /* SignUpViewController.swift */; };
+		72F0D01B288C214800FF4C26 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0D01A288C214800FF4C26 /* ScanViewController.swift */; };
+		72F0D020288C23E900FF4C26 /* TBD-Final.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 72F0D01F288C23E900FF4C26 /* TBD-Final.mlmodel */; };
+		72F0D023288C31C200FF4C26 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0D022288C31C200FF4C26 /* MainScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,11 +64,14 @@
 		72AA7604288BA6F900E1E1D8 /* smogifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = smogifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72AA7608288BA6F900E1E1D8 /* smogifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smogifyUITests.swift; sourceTree = "<group>"; };
 		72AA760A288BA6F900E1E1D8 /* smogifyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smogifyUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		72AA7617288BA90E00E1E1D8 /* streetAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = streetAnimation.json; path = fontsAndAnimations/streetAnimation.json; sourceTree = "<group>"; };
-		72AA7619288BA91A00E1E1D8 /* UberMoveBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = UberMoveBold.otf; path = fontsAndAnimations/UberMoveBold.otf; sourceTree = "<group>"; };
-		72AA761A288BA91A00E1E1D8 /* UberMoveMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = UberMoveMedium.otf; path = fontsAndAnimations/UberMoveMedium.otf; sourceTree = "<group>"; };
+		72AA7617288BA90E00E1E1D8 /* streetAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = streetAnimation.json; sourceTree = "<group>"; };
+		72AA7619288BA91A00E1E1D8 /* UberMoveBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = UberMoveBold.otf; sourceTree = "<group>"; };
+		72AA761A288BA91A00E1E1D8 /* UberMoveMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = UberMoveMedium.otf; sourceTree = "<group>"; };
 		72AA761D288BAC2600E1E1D8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		72AA761F288BAC3200E1E1D8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		72F0D01A288C214800FF4C26 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		72F0D01F288C23E900FF4C26 /* TBD-Final.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "TBD-Final.mlmodel"; sourceTree = "<group>"; };
+		72F0D022288C31C200FF4C26 /* MainScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
 		8056E32B663BC7B86901F873 /* Pods_smogify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smogify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5143556B1B0BE6C6DB1ADAF /* Pods-smogify-smogifyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smogify-smogifyUITests.release.xcconfig"; path = "Target Support Files/Pods-smogify-smogifyUITests/Pods-smogify-smogifyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CE8AB970C527F648C2161906 /* Pods-smogifyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smogifyTests.debug.xcconfig"; path = "Target Support Files/Pods-smogifyTests/Pods-smogifyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,18 +155,13 @@
 		72AA75E6288BA6F700E1E1D8 /* smogify */ = {
 			isa = PBXGroup;
 			children = (
-				72AA75E7288BA6F700E1E1D8 /* AppDelegate.swift */,
-				72AA75E9288BA6F700E1E1D8 /* SceneDelegate.swift */,
-				72AA75EB288BA6F700E1E1D8 /* ViewController.swift */,
-				72AA761D288BAC2600E1E1D8 /* LogInViewController.swift */,
-				72AA761F288BAC3200E1E1D8 /* SignUpViewController.swift */,
-				72AA75ED288BA6F700E1E1D8 /* Main.storyboard */,
-				72AA75F0288BA6F900E1E1D8 /* Assets.xcassets */,
-				72AA75F2288BA6F900E1E1D8 /* LaunchScreen.storyboard */,
-				72AA7617288BA90E00E1E1D8 /* streetAnimation.json */,
-				72AA7619288BA91A00E1E1D8 /* UberMoveBold.otf */,
-				72AA761A288BA91A00E1E1D8 /* UberMoveMedium.otf */,
+				72F0D021288C31A000FF4C26 /* Models */,
+				72F0D016288C20A100FF4C26 /* Views */,
 				72AA75F5288BA6F900E1E1D8 /* Info.plist */,
+				72F0D017288C20B100FF4C26 /* Controllers */,
+				72F0D01C288C239F00FF4C26 /* CoreML */,
+				72F0D019288C20EE00FF4C26 /* designAssets */,
+				72F0D018288C20CC00FF4C26 /* delegates */,
 			);
 			path = smogify;
 			sourceTree = "<group>";
@@ -180,6 +181,62 @@
 				72AA760A288BA6F900E1E1D8 /* smogifyUITestsLaunchTests.swift */,
 			);
 			path = smogifyUITests;
+			sourceTree = "<group>";
+		};
+		72F0D016288C20A100FF4C26 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				72AA75F2288BA6F900E1E1D8 /* LaunchScreen.storyboard */,
+				72AA75ED288BA6F700E1E1D8 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		72F0D017288C20B100FF4C26 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				72AA75EB288BA6F700E1E1D8 /* ViewController.swift */,
+				72AA761D288BAC2600E1E1D8 /* LogInViewController.swift */,
+				72AA761F288BAC3200E1E1D8 /* SignUpViewController.swift */,
+				72F0D01A288C214800FF4C26 /* ScanViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		72F0D018288C20CC00FF4C26 /* delegates */ = {
+			isa = PBXGroup;
+			children = (
+				72AA75E7288BA6F700E1E1D8 /* AppDelegate.swift */,
+				72AA75E9288BA6F700E1E1D8 /* SceneDelegate.swift */,
+			);
+			path = delegates;
+			sourceTree = "<group>";
+		};
+		72F0D019288C20EE00FF4C26 /* designAssets */ = {
+			isa = PBXGroup;
+			children = (
+				72AA75F0288BA6F900E1E1D8 /* Assets.xcassets */,
+				72AA7617288BA90E00E1E1D8 /* streetAnimation.json */,
+				72AA7619288BA91A00E1E1D8 /* UberMoveBold.otf */,
+				72AA761A288BA91A00E1E1D8 /* UberMoveMedium.otf */,
+			);
+			path = designAssets;
+			sourceTree = "<group>";
+		};
+		72F0D01C288C239F00FF4C26 /* CoreML */ = {
+			isa = PBXGroup;
+			children = (
+				72F0D01F288C23E900FF4C26 /* TBD-Final.mlmodel */,
+			);
+			path = CoreML;
+			sourceTree = "<group>";
+		};
+		72F0D021288C31A000FF4C26 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				72F0D022288C31C200FF4C26 /* MainScene.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,10 +482,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				72AA761E288BAC2600E1E1D8 /* LogInViewController.swift in Sources */,
+				72F0D020288C23E900FF4C26 /* TBD-Final.mlmodel in Sources */,
 				72AA75EC288BA6F700E1E1D8 /* ViewController.swift in Sources */,
 				72AA75E8288BA6F700E1E1D8 /* AppDelegate.swift in Sources */,
 				72AA75EA288BA6F700E1E1D8 /* SceneDelegate.swift in Sources */,
+				72F0D023288C31C200FF4C26 /* MainScene.swift in Sources */,
 				72AA7620288BAC3200E1E1D8 /* SignUpViewController.swift in Sources */,
+				72F0D01B288C214800FF4C26 /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,9 +671,11 @@
 				DEVELOPMENT_TEAM = 3YZ68KUMHG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = smogify/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Smogify uses camera data to identify smog :)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -640,9 +702,11 @@
 				DEVELOPMENT_TEAM = 3YZ68KUMHG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = smogify/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Smogify uses camera data to identify smog :)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
