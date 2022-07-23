@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -38,52 +39,56 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WDy-1M-3p1">
-                                <rect key="frame" x="99" y="724" width="211" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Sign Up">
-                                            <attributes>
-                                                <font key="NSFont" size="14" name="UberMove-Medium"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <segue destination="c4l-ew-AES" kind="show" id="s2x-bM-jl3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCF-GR-pDA">
-                                <rect key="frame" x="99" y="671" width="211" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.63106530900000002" green="0.91002887489999995" blue="0.68628448249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" cornerStyle="dynamic">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Log In">
-                                            <attributes>
-                                                <font key="NSFont" size="14" name="UberMove-Medium"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="IPi-Vh-f1t" kind="show" id="fuo-ZZ-4Mv"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HFI-Bq-gSG" customClass="AnimationView" customModule="Lottie">
-                                <rect key="frame" x="102" y="398" width="211" height="197"/>
+                                <rect key="frame" x="99" y="515" width="211" height="197"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="streetAnimation"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LX2-2R-TPA">
+                                <rect key="frame" x="0.0" y="384" width="413" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.63106530900000002" green="0.91002887489999995" blue="0.68628448249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EsA-kV-jfv">
+                                <rect key="frame" x="0.0" y="432" width="414" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.34543687109999999" green="0.001463797526" blue="0.99970442059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2Q-vh-RNe">
+                                <rect key="frame" x="0.0" y="480" width="414" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.85341387989999995" green="0.44570833440000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Next-generation pollution detection. Join our NFT incentive program. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ixq-TY-LYa">
+                                <rect key="frame" x="99" y="223" width="219" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="UberMove-Bold" family="Uber Move" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WDy-1M-3p1">
+                                <rect key="frame" x="99" y="720" width="211" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Get started">
+                                            <attributes>
+                                                <font key="NSFont" size="14" name="UberMove-Medium"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="elR-TH-XIT" kind="show" id="8iL-78-3xV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -91,13 +96,12 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="animationView" destination="HFI-Bq-gSG" id="lKg-C7-06j"/>
-                        <outlet property="logInButton" destination="BCF-GR-pDA" id="lhi-eQ-r5a"/>
                         <outlet property="signUpButton" destination="WDy-1M-3p1" id="Xl8-eV-TsB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-293" y="86"/>
+            <point key="canvasLocation" x="269.56521739130437" y="-50.223214285714285"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="Y1w-Ca-ZdB">
@@ -177,12 +181,11 @@
                     <navigationItem key="navigationItem" id="lrz-cS-kWH"/>
                     <connections>
                         <outlet property="continueButton" destination="nj6-yR-O5m" id="yFb-Sa-SZm"/>
-                        <segue destination="elR-TH-XIT" kind="show" identifier="signUpToMain" id="TmD-F3-5nP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RgP-jJ-rtR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="777" y="682"/>
+            <point key="canvasLocation" x="-538" y="-800"/>
         </scene>
         <!--Routes-->
         <scene sceneID="b5L-iN-HaL">
@@ -271,7 +274,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KdT-E0-2JJ" customClass="ARSCNView">
-                                <rect key="frame" x="0.0" y="146" width="414" height="613"/>
+                                <rect key="frame" x="-3" y="107" width="417" height="695"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </sceneKitView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Mk-2T-4QN">
@@ -288,13 +291,180 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.34543687109999999" green="0.001463797526" blue="0.99970442059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJD-ap-hsu">
+                            <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJD-ap-hsu">
                                 <rect key="frame" x="122" y="781" width="164" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="UberMove-Medium" family="Uber Move" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W9D-by-obv">
+                                <rect key="frame" x="0.0" y="107" width="414" height="695"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How to get started" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yco-cP-NOO">
+                                        <rect key="frame" x="23" y="426" width="189" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="UberMove-Bold" family="Uber Move" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xq5-Or-JXd">
+                                        <rect key="frame" x="6" y="476" width="408" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kHs-bA-uka">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="q01-iU-yYZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6za-HT-Wrn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                            </collectionViewCell>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wEm-OH-z0q">
+                                                <rect key="frame" x="138" y="0.0" width="128" height="128"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="b3D-hl-Ybc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                                <color key="backgroundColor" red="0.85341387989999995" green="0.44570833440000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </collectionViewCell>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9By-jq-WUD">
+                                                <rect key="frame" x="276" y="0.0" width="128" height="128"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jwM-Ww-XRd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                                <color key="backgroundColor" red="0.63106530900000002" green="0.91002887489999995" blue="0.68628448249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </collectionViewCell>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fxP-N9-dNe">
+                                                <rect key="frame" x="414" y="0.0" width="128" height="128"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gJ7-ei-wiK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                            </collectionViewCell>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7nj-Na-TNl">
+                                                <rect key="frame" x="552" y="64" width="0.0" height="0.0"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="0ZK-aC-OgJ">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u4V-Rn-w00">
+                                        <rect key="frame" x="115" y="647" width="189" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Add wallet">
+                                                    <attributes>
+                                                        <font key="NSFont" size="14" name="UberMove-Medium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Help us travel the roads" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvQ-UI-2m2">
+                                <rect key="frame" x="77" y="148" width="255" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="UberMove-Bold" family="Uber Move" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We are powered by crowdsourcing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqt-db-RXz">
+                                <rect key="frame" x="73" y="200" width="263" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOB-pk-e7i">
+                                <rect key="frame" x="183" y="256" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What's in it for you?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhP-B7-8Wc">
+                                <rect key="frame" x="20" y="288" width="194" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="UberMove-Bold" family="Uber Move" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4Yn-88-a4n">
+                                <rect key="frame" x="0.0" y="363" width="408" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4bI-Nc-aDG">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BEH-VA-Kgd">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uMe-D0-PHs">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dHY-Zg-vvd">
+                                        <rect key="frame" x="138" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sXd-4I-AFZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" red="0.85341387989999995" green="0.44570833440000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UNu-0I-7V1">
+                                        <rect key="frame" x="276" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="91x-Dn-b8g">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" red="0.63106530900000002" green="0.91002887489999995" blue="0.68628448249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="voG-NO-HZs">
+                                        <rect key="frame" x="414" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cvx-2Q-Hw6">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nhs-WJ-HFJ">
+                                        <rect key="frame" x="552" y="64" width="0.0" height="0.0"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="n52-ut-j4u">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WQI-Ih-6j0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -306,7 +476,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="spN-iu-3Eo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2510.144927536232" y="-330.13392857142856"/>
+            <point key="canvasLocation" x="2589.8550724637685" y="-368.30357142857139"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5hm-xc-JCs">
@@ -400,21 +570,18 @@
                     <navigationItem key="navigationItem" id="cJ0-Fa-E4z"/>
                     <connections>
                         <outlet property="continueButton" destination="gc0-cm-1Ww" id="L1t-pe-yBx"/>
-                        <segue destination="elR-TH-XIT" kind="show" identifier="logInToMain" id="5od-qC-bvy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qx9-oy-GVa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="777" y="-330"/>
+            <point key="canvasLocation" x="765" y="-958"/>
         </scene>
     </scenes>
     <designables>
         <designable name="HFI-Bq-gSG"/>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="fuo-ZZ-4Mv"/>
-        <segue reference="5od-qC-bvy"/>
-        <segue reference="s2x-bM-jl3"/>
+        <segue reference="buX-lL-1BH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="94"/>

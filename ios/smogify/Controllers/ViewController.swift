@@ -10,7 +10,7 @@ import Lottie
 
 class ViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet weak var logInButton: UIButton!
+
     @IBOutlet weak var animationView: AnimationView!
     
     
@@ -18,12 +18,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        animationView.play(fromProgress: 0, toProgress: 1, loopMode: .loop)
+        
         signUpButton.layer.cornerRadius = 15
-        logInButton.layer.cornerRadius = 15
+
         
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        animationView.play(fromProgress: 0, toProgress: 1, loopMode: .loop)
+    }
 
 }
 
