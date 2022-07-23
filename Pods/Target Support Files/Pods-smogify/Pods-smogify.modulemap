@@ -1,0 +1,6 @@
+framework module Pods_smogify {
+  umbrella header "Pods-smogify-umbrella.h"
+
+  export *
+  module * { export * }
+}

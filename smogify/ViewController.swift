@@ -6,12 +6,21 @@
 //
 
 import UIKit
+import Lottie
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var logInButton: UIButton!
+    @IBOutlet weak var animationView: AnimationView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        animationView.play(fromProgress: 0, toProgress: 1, loopMode: .loop)
+        signUpButton.layer.cornerRadius = 15
+        logInButton.layer.cornerRadius = 15
+        
     }
 
 

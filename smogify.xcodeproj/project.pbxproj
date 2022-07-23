@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B34DB33FA53262EAEEB548D /* Pods_smogify_smogifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE2538853143CE101621EA1 /* Pods_smogify_smogifyUITests.framework */; };
+		1C347B8BB20C5427B929AE01 /* Pods_smogify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8056E32B663BC7B86901F873 /* Pods_smogify.framework */; };
+		3884319CF569AB5DADE5E64E /* Pods_smogifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED15B965A1E8601AA098E72A /* Pods_smogifyTests.framework */; };
 		72AA75E8288BA6F700E1E1D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA75E7288BA6F700E1E1D8 /* AppDelegate.swift */; };
 		72AA75EA288BA6F700E1E1D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA75E9288BA6F700E1E1D8 /* SceneDelegate.swift */; };
 		72AA75EC288BA6F700E1E1D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA75EB288BA6F700E1E1D8 /* ViewController.swift */; };
@@ -16,6 +19,11 @@
 		72AA75FF288BA6F900E1E1D8 /* smogifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA75FE288BA6F900E1E1D8 /* smogifyTests.swift */; };
 		72AA7609288BA6F900E1E1D8 /* smogifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA7608288BA6F900E1E1D8 /* smogifyUITests.swift */; };
 		72AA760B288BA6F900E1E1D8 /* smogifyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA760A288BA6F900E1E1D8 /* smogifyUITestsLaunchTests.swift */; };
+		72AA7618288BA90E00E1E1D8 /* streetAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 72AA7617288BA90E00E1E1D8 /* streetAnimation.json */; };
+		72AA761B288BA91A00E1E1D8 /* UberMoveBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 72AA7619288BA91A00E1E1D8 /* UberMoveBold.otf */; };
+		72AA761C288BA91A00E1E1D8 /* UberMoveMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 72AA761A288BA91A00E1E1D8 /* UberMoveMedium.otf */; };
+		72AA761E288BAC2600E1E1D8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA761D288BAC2600E1E1D8 /* LogInViewController.swift */; };
+		72AA7620288BAC3200E1E1D8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA761F288BAC3200E1E1D8 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BE2538853143CE101621EA1 /* Pods_smogify_smogifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smogify_smogifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EE5FE6DDCACB5DCD7B7EAB5 /* Pods-smogifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smogifyTests.release.xcconfig"; path = "Target Support Files/Pods-smogifyTests/Pods-smogifyTests.release.xcconfig"; sourceTree = "<group>"; };
+		5BA8C483EEFB593321A3A13C /* Pods-smogify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smogify.debug.xcconfig"; path = "Target Support Files/Pods-smogify/Pods-smogify.debug.xcconfig"; sourceTree = "<group>"; };
+		5D1B1FE4247B7C738C6DC36D /* Pods-smogify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smogify.release.xcconfig"; path = "Target Support Files/Pods-smogify/Pods-smogify.release.xcconfig"; sourceTree = "<group>"; };
 		72AA75E4288BA6F700E1E1D8 /* smogify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smogify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72AA75E7288BA6F700E1E1D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72AA75E9288BA6F700E1E1D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +61,16 @@
 		72AA7604288BA6F900E1E1D8 /* smogifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = smogifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72AA7608288BA6F900E1E1D8 /* smogifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smogifyUITests.swift; sourceTree = "<group>"; };
 		72AA760A288BA6F900E1E1D8 /* smogifyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smogifyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		72AA7617288BA90E00E1E1D8 /* streetAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = streetAnimation.json; path = fontsAndAnimations/streetAnimation.json; sourceTree = "<group>"; };
+		72AA7619288BA91A00E1E1D8 /* UberMoveBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = UberMoveBold.otf; path = fontsAndAnimations/UberMoveBold.otf; sourceTree = "<group>"; };
+		72AA761A288BA91A00E1E1D8 /* UberMoveMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = UberMoveMedium.otf; path = fontsAndAnimations/UberMoveMedium.otf; sourceTree = "<group>"; };
+		72AA761D288BAC2600E1E1D8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		72AA761F288BAC3200E1E1D8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		8056E32B663BC7B86901F873 /* Pods_smogify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smogify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5143556B1B0BE6C6DB1ADAF /* Pods-smogify-smogifyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smogify-smogifyUITests.release.xcconfig"; path = "Target Support Files/Pods-smogify-smogifyUITests/Pods-smogify-smogifyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CE8AB970C527F648C2161906 /* Pods-smogifyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smogifyTests.debug.xcconfig"; path = "Target Support Files/Pods-smogifyTests/Pods-smogifyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ED15B965A1E8601AA098E72A /* Pods_smogifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smogifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F36D81A4AB06DD59951E1528 /* Pods-smogify-smogifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smogify-smogifyUITests.debug.xcconfig"; path = "Target Support Files/Pods-smogify-smogifyUITests/Pods-smogify-smogifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C347B8BB20C5427B929AE01 /* Pods_smogify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3884319CF569AB5DADE5E64E /* Pods_smogifyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +94,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B34DB33FA53262EAEEB548D /* Pods_smogify_smogifyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02CA1BFEDC281667EA984630 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8056E32B663BC7B86901F873 /* Pods_smogify.framework */,
+				0BE2538853143CE101621EA1 /* Pods_smogify_smogifyUITests.framework */,
+				ED15B965A1E8601AA098E72A /* Pods_smogifyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C511B5342FEA257C44DE34E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5BA8C483EEFB593321A3A13C /* Pods-smogify.debug.xcconfig */,
+				5D1B1FE4247B7C738C6DC36D /* Pods-smogify.release.xcconfig */,
+				F36D81A4AB06DD59951E1528 /* Pods-smogify-smogifyUITests.debug.xcconfig */,
+				A5143556B1B0BE6C6DB1ADAF /* Pods-smogify-smogifyUITests.release.xcconfig */,
+				CE8AB970C527F648C2161906 /* Pods-smogifyTests.debug.xcconfig */,
+				4EE5FE6DDCACB5DCD7B7EAB5 /* Pods-smogifyTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		72AA75DB288BA6F700E1E1D8 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +131,8 @@
 				72AA75FD288BA6F900E1E1D8 /* smogifyTests */,
 				72AA7607288BA6F900E1E1D8 /* smogifyUITests */,
 				72AA75E5288BA6F700E1E1D8 /* Products */,
+				2C511B5342FEA257C44DE34E /* Pods */,
+				02CA1BFEDC281667EA984630 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,9 +152,14 @@
 				72AA75E7288BA6F700E1E1D8 /* AppDelegate.swift */,
 				72AA75E9288BA6F700E1E1D8 /* SceneDelegate.swift */,
 				72AA75EB288BA6F700E1E1D8 /* ViewController.swift */,
+				72AA761D288BAC2600E1E1D8 /* LogInViewController.swift */,
+				72AA761F288BAC3200E1E1D8 /* SignUpViewController.swift */,
 				72AA75ED288BA6F700E1E1D8 /* Main.storyboard */,
 				72AA75F0288BA6F900E1E1D8 /* Assets.xcassets */,
 				72AA75F2288BA6F900E1E1D8 /* LaunchScreen.storyboard */,
+				72AA7617288BA90E00E1E1D8 /* streetAnimation.json */,
+				72AA7619288BA91A00E1E1D8 /* UberMoveBold.otf */,
+				72AA761A288BA91A00E1E1D8 /* UberMoveMedium.otf */,
 				72AA75F5288BA6F900E1E1D8 /* Info.plist */,
 			);
 			path = smogify;
@@ -134,9 +189,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72AA760E288BA6F900E1E1D8 /* Build configuration list for PBXNativeTarget "smogify" */;
 			buildPhases = (
+				5D5FFD5E1A9AF9CB575C4B03 /* [CP] Check Pods Manifest.lock */,
 				72AA75E0288BA6F700E1E1D8 /* Sources */,
 				72AA75E1288BA6F700E1E1D8 /* Frameworks */,
 				72AA75E2288BA6F700E1E1D8 /* Resources */,
+				16913000C4B34FC14C364F00 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +208,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72AA7611288BA6F900E1E1D8 /* Build configuration list for PBXNativeTarget "smogifyTests" */;
 			buildPhases = (
+				A78E6A0FE9B9245F6A85C2FF /* [CP] Check Pods Manifest.lock */,
 				72AA75F6288BA6F900E1E1D8 /* Sources */,
 				72AA75F7288BA6F900E1E1D8 /* Frameworks */,
 				72AA75F8288BA6F900E1E1D8 /* Resources */,
@@ -169,9 +227,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72AA7614288BA6F900E1E1D8 /* Build configuration list for PBXNativeTarget "smogifyUITests" */;
 			buildPhases = (
+				9EBB8B9E440A86F22760BE79 /* [CP] Check Pods Manifest.lock */,
 				72AA7600288BA6F900E1E1D8 /* Sources */,
 				72AA7601288BA6F900E1E1D8 /* Frameworks */,
 				72AA7602288BA6F900E1E1D8 /* Resources */,
+				330ACA9CFBC43E5ABF0579FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,7 +293,10 @@
 			files = (
 				72AA75F4288BA6F900E1E1D8 /* LaunchScreen.storyboard in Resources */,
 				72AA75F1288BA6F900E1E1D8 /* Assets.xcassets in Resources */,
+				72AA761B288BA91A00E1E1D8 /* UberMoveBold.otf in Resources */,
 				72AA75EF288BA6F700E1E1D8 /* Main.storyboard in Resources */,
+				72AA7618288BA90E00E1E1D8 /* streetAnimation.json in Resources */,
+				72AA761C288BA91A00E1E1D8 /* UberMoveMedium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +316,119 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		16913000C4B34FC14C364F00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-smogify/Pods-smogify-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-smogify/Pods-smogify-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-smogify/Pods-smogify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		330ACA9CFBC43E5ABF0579FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-smogify-smogifyUITests/Pods-smogify-smogifyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-smogify-smogifyUITests/Pods-smogify-smogifyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-smogify-smogifyUITests/Pods-smogify-smogifyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D5FFD5E1A9AF9CB575C4B03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-smogify-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EBB8B9E440A86F22760BE79 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-smogify-smogifyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A78E6A0FE9B9245F6A85C2FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-smogifyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		72AA75E0288BA6F700E1E1D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72AA761E288BAC2600E1E1D8 /* LogInViewController.swift in Sources */,
 				72AA75EC288BA6F700E1E1D8 /* ViewController.swift in Sources */,
 				72AA75E8288BA6F700E1E1D8 /* AppDelegate.swift in Sources */,
 				72AA75EA288BA6F700E1E1D8 /* SceneDelegate.swift in Sources */,
+				72AA7620288BAC3200E1E1D8 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +602,7 @@
 		};
 		72AA760F288BA6F900E1E1D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BA8C483EEFB593321A3A13C /* Pods-smogify.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -462,6 +631,7 @@
 		};
 		72AA7610288BA6F900E1E1D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D1B1FE4247B7C738C6DC36D /* Pods-smogify.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -490,6 +660,7 @@
 		};
 		72AA7612288BA6F900E1E1D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE8AB970C527F648C2161906 /* Pods-smogifyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -510,6 +681,7 @@
 		};
 		72AA7613288BA6F900E1E1D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EE5FE6DDCACB5DCD7B7EAB5 /* Pods-smogifyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -530,6 +702,7 @@
 		};
 		72AA7615288BA6F900E1E1D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F36D81A4AB06DD59951E1528 /* Pods-smogify-smogifyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -548,6 +721,7 @@
 		};
 		72AA7616288BA6F900E1E1D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5143556B1B0BE6C6DB1ADAF /* Pods-smogify-smogifyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
