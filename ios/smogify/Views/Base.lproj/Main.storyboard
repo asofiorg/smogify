@@ -209,11 +209,13 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.34543687109999999" green="0.001463797526" blue="0.99970442059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D1I-8u-FqV" customClass="MapView" customModule="MapboxMaps">
-                                <rect key="frame" x="20" y="133" width="374" height="680"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E7c-7o-8Du">
+                                <rect key="frame" x="20" y="116" width="374" height="660"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="jpN-TM-aWP" kind="embed" destinationCreationSelector="segueToHostingController:" id="ejT-JM-3m4"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9y1-h9-2QW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -222,7 +224,7 @@
                         <color key="badgeColor" red="0.34543687109999999" green="0.001463797526" blue="0.99970442059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="mapView" destination="D1I-8u-FqV" id="MSu-nC-h49"/>
+                        <outlet property="containerView" destination="E7c-7o-8Du" id="ky4-LU-ixr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bT6-gq-iLv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -578,6 +580,30 @@
             </objects>
             <point key="canvasLocation" x="765" y="-958"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="1f3-se-Dco">
+            <objects>
+                <viewController id="Vya-ph-MRu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h9v-fY-bN7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PvD-BW-lKW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3339" y="803"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="uoz-cW-g09">
+            <objects>
+                <hostingController id="jpN-TM-aWP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ax0-2F-f7M"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NuM-bb-fVj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4330" y="276"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="buX-lL-1BH"/>
@@ -588,9 +614,6 @@
         <image name="globe" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

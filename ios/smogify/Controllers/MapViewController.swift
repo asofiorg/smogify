@@ -7,35 +7,46 @@
 
 import UIKit
 import CoreLocation
-import MapboxMaps
+import SwiftUI
 
 
 class MapViewController: UIViewController {
     
-    @IBOutlet weak var mapView: MapView!
 
+    
+    @IBOutlet weak var containerView: UIView!
+    
     var dataManaging = DataManaging()
     var coordinates: [CLLocationCoordinate2D]?
+    var locationManager: CLLocationManager?
+    var userLocation: CLLocationCoordinate2D?
     
-    
+    var annotationsN = [
+        Spot(coordinate: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275)),
+        Spot(coordinate: CLLocationCoordinate2D(latitude: 48.8567, longitude: 2.3508)),
+        Spot(coordinate: CLLocationCoordinate2D(latitude: 41.9, longitude: 12.5)),
+        Spot(coordinate: CLLocationCoordinate2D(latitude: 38.895111, longitude: -77.036667))
+    ]
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.async {
             self.dataManaging.delegate = self
             self.dot()
-            
         }
         
         
-        let myResourceOptions = ResourceOptions(accessToken: "your_public_access_token")
-        let myMapInitOptions = MapInitOptions(resourceOptions: myResourceOptions)
-        
-       
-         
-        
-        
-        
+    
     }
+    
+    @IBSegueAction func segueToHostingController(_ coder: NSCoder) -> UIViewController? {
+       
+        let contentView = ContentView(annotations: annotationsN)
+        
+        return UIHostingController(coder: coder, rootView: contentView)
+    }
+
+    
+    
     func dot(){
             self.dataManaging.fetchData()
         
@@ -43,6 +54,9 @@ class MapViewController: UIViewController {
     
     
     
+    
+    
+   
 
 }
 
@@ -65,4 +79,44 @@ extension MapViewController: DataManagingDelegate{
     
     
 }
-
+//
+//
+//extension MapViewController: CLLocationManagerDelegate{
+//
+//
+//
+//
+//
+//
+//
+//    func checkLocationAuthorization(){
+//
+//
+//
+//
+//        guard let locationManager = locationManager else{return}
+//
+//        switch locationManager.authorizationStatus{
+//
+//        case .notDetermined:
+//            locationManager.requestWhenInUseAuthorization()
+//        case .restricted:
+//            print("restricted")
+//        case .denied:
+//            print("denied")
+//        case .authorizedAlways, .authorizedWhenInUse:
+//
+//            userLocation = locationManager.location!.coordinate
+//            print ("user is at \(userLocation!.latitude)º, \(userLocation!.latitude)º")
+//            initializeUI()
+//
+//        @unknown default:
+//            break
+//        }
+//
+//    }
+//
+//    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+//        checkLocationAuthorization()
+//    }
+//}

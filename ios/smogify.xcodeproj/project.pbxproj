@@ -27,6 +27,7 @@
 		72EA8EEC288DA44E005C4937 /* MapData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EA8EEB288DA44E005C4937 /* MapData.swift */; };
 		72EA8EEE288DA4B5005C4937 /* DataManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EA8EED288DA4B5005C4937 /* DataManaging.swift */; };
 		72EA8EF1288DD8EE005C4937 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 72EA8EF0288DD8EE005C4937 /* MapboxMaps */; };
+		72EA8EF8288DE7BC005C4937 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EA8EF7288DE7BC005C4937 /* SwiftUIView.swift */; };
 		72F09BCA288C68630051D4AF /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F09BC9288C68630051D4AF /* RewardsViewController.swift */; };
 		72F09BCC288C76B50051D4AF /* StyledCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F09BCB288C76B50051D4AF /* StyledCell.swift */; };
 		72F0D01B288C214800FF4C26 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0D01A288C214800FF4C26 /* ScanViewController.swift */; };
@@ -76,6 +77,7 @@
 		72EA8EE9288DA3C2005C4937 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		72EA8EEB288DA44E005C4937 /* MapData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapData.swift; sourceTree = "<group>"; };
 		72EA8EED288DA4B5005C4937 /* DataManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManaging.swift; sourceTree = "<group>"; };
+		72EA8EF7288DE7BC005C4937 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		72F09BC9288C68630051D4AF /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		72F09BCB288C76B50051D4AF /* StyledCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledCell.swift; sourceTree = "<group>"; };
 		72F0D01A288C214800FF4C26 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				72F09BC9288C68630051D4AF /* RewardsViewController.swift */,
 				72F09BCB288C76B50051D4AF /* StyledCell.swift */,
 				72EA8EE7288DA36A005C4937 /* MapViewController.swift */,
+				72EA8EF7288DE7BC005C4937 /* SwiftUIView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72EA8EF8288DE7BC005C4937 /* SwiftUIView.swift in Sources */,
 				72F09BCA288C68630051D4AF /* RewardsViewController.swift in Sources */,
 				72EA8EEA288DA3C2005C4937 /* DataModel.swift in Sources */,
 				72F09BCC288C76B50051D4AF /* StyledCell.swift in Sources */,

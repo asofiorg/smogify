@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var animationView: AnimationView!
     
-    
+
     
     
     override func viewDidLoad() {

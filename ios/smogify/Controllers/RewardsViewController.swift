@@ -20,7 +20,7 @@ class RewardsViewController: UIViewController, WKUIDelegate {
             super.viewDidLoad()
             
             var myURL: URL!
-            myURL = URL(string: "https://whatismyviewport.com/")
+            myURL = URL(string: "https://smogify.vercel.app/")
             let myRequest = URLRequest(url: myURL!)
             webView.load(myRequest)
             
