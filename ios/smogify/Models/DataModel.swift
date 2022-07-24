@@ -9,7 +9,7 @@ import Foundation
 
 struct DataModel{
 
-    var coordinates: [[Int]]
+    var coordinates: [[Double]]
     
 }
 

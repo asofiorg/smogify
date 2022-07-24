@@ -15,7 +15,7 @@ protocol DataManagingDelegate{
 
 
 struct DataManaging{
-    let dataURL = "https://gist.githubusercontent.com/wavded/1200773/raw/e122cf709898c09758aecfef349964a8d73a83f3/sample.json"
+    let dataURL = "https://gist.githubusercontent.com/llanoajm/982bb007335a7a4bff8502c00b59ac0a/raw/bcdc3f76c4e8fc3bc35a19fbe12cbc06caeaa067/sample.json"
 
     var delegate: DataManagingDelegate?
     
@@ -69,10 +69,10 @@ struct DataManaging{
                 print("!!!")
             
             
-                var coordinates: [[Int]] = []
+                var coordinates: [[Double]] = []
             
             print(decodedData.type)
-//
+
 //            for num in 0...decodedData.features.count - 1{
 //
 //                let coord = decodedData.features[num].geometry.coordinates

@@ -16,12 +16,12 @@ struct MapData: Codable{
 //
 struct Feature: Codable{
     let type: String
-//    let geometry: Geometry //single?
+    let geometry: Geometry //single?
 
 }
 
 struct Geometry: Codable{
     let type: String
-    let coordinates: [Int]
+    let coordinates: [Double]
 }
 
