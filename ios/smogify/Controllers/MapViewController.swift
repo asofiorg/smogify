@@ -21,12 +21,7 @@ class MapViewController: UIViewController {
     var locationManager: CLLocationManager?
     var userLocation: CLLocationCoordinate2D?
     
-    var annotationsN = [
-        Spot(coordinate: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275)),
-        Spot(coordinate: CLLocationCoordinate2D(latitude: 48.8567, longitude: 2.3508)),
-        Spot(coordinate: CLLocationCoordinate2D(latitude: 41.9, longitude: 12.5)),
-        Spot(coordinate: CLLocationCoordinate2D(latitude: 38.895111, longitude: -77.036667))
-    ]
+    var annotationsN = [Spot(coordinate: CLLocationCoordinate2D(latitude: 40, longitude: 40))]
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.async {
@@ -64,9 +59,12 @@ class MapViewController: UIViewController {
 extension MapViewController: DataManagingDelegate{
     func didUpdateData(_ dataManaging: DataManaging, data: DataModel) {
         print("hi")
+        self.annotationsN = []
         for coord in data.coordinates{
 //            print(coord)
-            self.coordinates?.append(CLLocationCoordinate2D(latitude: coord[0], longitude: coord[1]))
+            
+            self.annotationsN.append(Spot(coordinate: CLLocationCoordinate2D(latitude: coord[0], longitude: coord[1])))
+            
             print("Coordinate{\(coord[0])º , \(coord[1])º}")
         }
     }
