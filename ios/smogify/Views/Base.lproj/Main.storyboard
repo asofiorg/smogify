@@ -190,7 +190,7 @@
         <!--Routes-->
         <scene sceneID="b5L-iN-HaL">
             <objects>
-                <viewController id="jkE-TA-acg" customClass="RoutesViewController" customModule="smogify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jkE-TA-acg" customClass="MapViewController" customModule="smogify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aMx-PD-PFK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -228,9 +228,6 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="goButtonTapped:" destination="jkE-TA-acg" eventType="touchUpInside" id="dVM-mj-7Oh"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdb-Kp-NvR">
                                 <rect key="frame" x="20" y="135" width="351" height="21"/>
@@ -246,11 +243,6 @@
                     <tabBarItem key="tabBarItem" title="Routes" image="globe" catalog="system" selectedImage="globe" id="zH6-BV-8fW">
                         <color key="badgeColor" red="0.34543687109999999" green="0.001463797526" blue="0.99970442059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
-                    <connections>
-                        <outlet property="addressLabel" destination="Gdb-Kp-NvR" id="sjq-2q-Y4w"/>
-                        <outlet property="goButton" destination="OMg-pp-JQr" id="CRk-FL-Axl"/>
-                        <outlet property="mapView" destination="B3y-xg-zXW" id="rwh-Qx-FUN"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bT6-gq-iLv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,11 +9,15 @@ import UIKit
 import SceneKit
 import Vision
 import ARKit
+import CoreLocation
+
+
 
 class ScanViewController: UIViewController, SCNSceneRendererDelegate, ARSCNViewDelegate, ARSessionDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
   
 
-    
+    var locationManager: CLLocationManager?
+//    var circle: CircleData?
 //    scene view items
     @IBOutlet weak var sceneView: ARSCNView!
     
@@ -42,6 +46,9 @@ class ScanViewController: UIViewController, SCNSceneRendererDelegate, ARSCNViewD
         renderLockedView(isLoggedIn)
         
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        sceneView.stop(self)
+    }
     
     
 
@@ -51,6 +58,7 @@ class ScanViewController: UIViewController, SCNSceneRendererDelegate, ARSCNViewD
     
     func renderLockedView(_ loggedIn : Bool){
         if(isLoggedIn){return}
+        
         lockedView.isHidden = false
         registerButton.layer.cornerRadius = 15
         
@@ -141,19 +149,19 @@ class ScanViewController: UIViewController, SCNSceneRendererDelegate, ARSCNViewD
     
     func renderScanView(_ loggedIn : Bool){
         if(loggedIn == false){return}
-        
+
         lockedView.removeFromSuperview()
-        
+
         sceneView.isHidden = false
-        
+
         sceneView.delegate = self
         if let scene = sceneController.scene{
             sceneView.scene = scene
         }
-        
+
         // configure Model Serving
         setupCoreML()
-        
+
         // run image-recognition model every .1 seconds
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector:#selector(self.loopCoreMLUpdate), userInfo: nil, repeats: true)
         
@@ -255,6 +263,7 @@ extension ScanViewController {
                     if (topPredictionScore > 0.95) && (topPredictionName != "no_product_detected"){
                         
                         
+//                            location all
                         
                         
                             
@@ -284,3 +293,42 @@ extension UIDeviceOrientation {
 
 
 
+
+extension ScanViewController: CLLocationManagerDelegate{
+    
+    
+    func checkIfLocationServicesIsEnabled(){
+        if CLLocationManager.locationServicesEnabled(){
+            locationManager = CLLocationManager()
+            locationManager?.activityType = .automotiveNavigation
+            locationManager!.delegate = self
+
+        }
+        else{
+            //alert
+        }
+    }
+    
+    func checkLocationAuthorization(){
+        guard let locationManager = locationManager else{return}
+
+        switch locationManager.authorizationStatus{
+
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+        case .restricted:
+            print("restricted")
+        case .denied:
+            print("denied")
+        case .authorizedAlways, .authorizedWhenInUse:
+            print("yay")
+//            circle?.lat = locationManager.location?.coordinate.latitude
+//            circle?.lon = locationManager.location?.coordinate.longitude
+
+        @unknown default:
+            break
+        }
+    }
+    
+    
+}

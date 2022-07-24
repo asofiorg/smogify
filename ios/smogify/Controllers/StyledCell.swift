@@ -8,10 +8,6 @@
 import UIKit
 
 class StyledCell: UICollectionViewCell {
-    
-
-
-    
-    
+      
     
 }
