@@ -15,9 +15,7 @@
 
 .max {
   width: 25rem;
-  height: 43rem;
   max-width: 25rem;
-  max-height: 43rem;
 }
 
 ::-webkit-scrollbar {

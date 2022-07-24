@@ -16,7 +16,7 @@ const App = ({ Component, pageProps }) => {
       ]}
     >
       <div className="flex items-center justify-center h-screen">
-        <div className="max border rounded-xl shadow-xl">
+        <div className="max">
           <Component {...pageProps} />
         </div>
       </div>

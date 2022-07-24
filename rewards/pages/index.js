@@ -19,7 +19,7 @@ const App = () => {
   const handleSubmit = async () => {
     const { data } = fetchIp;
 
-    const response = await fetch("http://localhost:8080/user", {
+    const response = await fetch("https://smogify.up.railway.app/user", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -40,6 +40,16 @@ const App = () => {
       router.push("/home");
     }
   });
+
+  if (!fetchIp?.data) {
+    return (
+      <div className="flex h-full">
+        <div className="m-auto">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900" />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <main className="flex flex-col items-center justify-evenly min-h-full">
