@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>MBXAccessToken</key>
+	<string>pk.eyJ1IjoiYW50b25pby1sbGFubyIsImEiOiJjbDV6bzljMXUxZmI0M2Ntbnl0dDQ0cWE0In0.FNFUfT-_bFq_l6Zo36lnAg</string>
 	<key>MKDirectionsApplicationSupportedModes</key>
 	<array>
 		<string>MKDirectionsModeCar</string>

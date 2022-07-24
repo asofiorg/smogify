@@ -73,14 +73,14 @@ struct DataManaging{
             
             print(decodedData.type)
 
-//            for num in 0...decodedData.features.count - 1{
-//
-//                let coord = decodedData.features[num].geometry.coordinates
-//
-//                coordinates.append(coord)
-//
-//
-//            }
+            for num in 0...decodedData.features.count - 1{
+
+                let coord = decodedData.features[num].geometry.coordinates
+
+                coordinates.append(coord)
+
+
+            }
             let thisData = DataModel(coordinates: coordinates)
             theData = thisData
             

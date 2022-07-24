@@ -26,6 +26,7 @@
 		72EA8EEA288DA3C2005C4937 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EA8EE9288DA3C2005C4937 /* DataModel.swift */; };
 		72EA8EEC288DA44E005C4937 /* MapData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EA8EEB288DA44E005C4937 /* MapData.swift */; };
 		72EA8EEE288DA4B5005C4937 /* DataManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EA8EED288DA4B5005C4937 /* DataManaging.swift */; };
+		72EA8EF1288DD8EE005C4937 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 72EA8EF0288DD8EE005C4937 /* MapboxMaps */; };
 		72F09BCA288C68630051D4AF /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F09BC9288C68630051D4AF /* RewardsViewController.swift */; };
 		72F09BCC288C76B50051D4AF /* StyledCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F09BCB288C76B50051D4AF /* StyledCell.swift */; };
 		72F0D01B288C214800FF4C26 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0D01A288C214800FF4C26 /* ScanViewController.swift */; };
@@ -92,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72EA8EF1288DD8EE005C4937 /* MapboxMaps in Frameworks */,
 				1C347B8BB20C5427B929AE01 /* Pods_smogify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +271,9 @@
 			dependencies = (
 			);
 			name = smogify;
+			packageProductDependencies = (
+				72EA8EF0288DD8EE005C4937 /* MapboxMaps */,
+			);
 			productName = smogify;
 			productReference = 72AA75E4288BA6F700E1E1D8 /* smogify.app */;
 			productType = "com.apple.product-type.application";
@@ -344,6 +349,9 @@
 				Base,
 			);
 			mainGroup = 72AA75DB288BA6F700E1E1D8;
+			packageReferences = (
+				72EA8EEF288DD8EE005C4937 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
+			);
 			productRefGroup = 72AA75E5288BA6F700E1E1D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -563,6 +571,7 @@
 		72AA760C288BA6F900E1E1D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -597,6 +606,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -618,12 +628,14 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Debug;
 		};
 		72AA760D288BA6F900E1E1D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -673,6 +685,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Release;
 		};
@@ -680,11 +693,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5BA8C483EEFB593321A3A13C /* Pods-smogify.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3YZ68KUMHG;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm-64";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = smogify/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Smogify uses camera data to identify smog :)";
@@ -713,6 +728,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5D1B1FE4247B7C738C6DC36D /* Pods-smogify.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -862,6 +878,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		72EA8EEF288DD8EE005C4937 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		72EA8EF0288DD8EE005C4937 /* MapboxMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72EA8EEF288DD8EE005C4937 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
+			productName = MapboxMaps;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 72AA75DC288BA6F700E1E1D8 /* Project object */;
 }

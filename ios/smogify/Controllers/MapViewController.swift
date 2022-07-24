@@ -7,11 +7,15 @@
 
 import UIKit
 import CoreLocation
+import MapboxMaps
+
 
 class MapViewController: UIViewController {
     
+    @IBOutlet weak var mapView: MapView!
+
     var dataManaging = DataManaging()
-    var coordinates: [CLLocationCoordinate2D]!
+    var coordinates: [CLLocationCoordinate2D]?
     
     
     override func viewDidLoad() {
@@ -19,7 +23,15 @@ class MapViewController: UIViewController {
         DispatchQueue.main.async {
             self.dataManaging.delegate = self
             self.dot()
+            
         }
+        
+        
+        let myResourceOptions = ResourceOptions(accessToken: "your_public_access_token")
+        let myMapInitOptions = MapInitOptions(resourceOptions: myResourceOptions)
+        
+       
+         
         
         
         
@@ -38,10 +50,11 @@ class MapViewController: UIViewController {
 extension MapViewController: DataManagingDelegate{
     func didUpdateData(_ dataManaging: DataManaging, data: DataModel) {
         print("hi")
-//        for coord in data.coordinates{
-//            self.coordinates.append(CLLocationCoordinate2D(latitude: coord[0], longitude: coord[1]))
-//            print("Coordinate{\(coord[0])º , \(coord[1])º}")
-//        }
+        for coord in data.coordinates{
+//            print(coord)
+            self.coordinates?.append(CLLocationCoordinate2D(latitude: coord[0], longitude: coord[1]))
+            print("Coordinate{\(coord[0])º , \(coord[1])º}")
+        }
     }
     
     func didFailWithError(error: Error) {
@@ -52,3 +65,4 @@ extension MapViewController: DataManagingDelegate{
     
     
 }
+

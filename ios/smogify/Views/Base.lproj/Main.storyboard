@@ -195,10 +195,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="B3y-xg-zXW">
-                                <rect key="frame" x="0.0" y="192" width="414" height="513"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yBX-ao-lHu">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -213,29 +209,11 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.34543687109999999" green="0.001463797526" blue="0.99970442059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMg-pp-JQr">
-                                <rect key="frame" x="142" y="724" width="131" height="38"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D1I-8u-FqV" customClass="MapView" customModule="MapboxMaps">
+                                <rect key="frame" x="20" y="133" width="374" height="680"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.91367834810000004" green="0.018972912799999998" blue="0.99972969290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Begin Route">
-                                            <attributes>
-                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" size="20" name="UberMove-Medium"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdb-Kp-NvR">
-                                <rect key="frame" x="20" y="135" width="351" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9y1-h9-2QW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -243,6 +221,9 @@
                     <tabBarItem key="tabBarItem" title="Routes" image="globe" catalog="system" selectedImage="globe" id="zH6-BV-8fW">
                         <color key="badgeColor" red="0.34543687109999999" green="0.001463797526" blue="0.99970442059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="mapView" destination="D1I-8u-FqV" id="MSu-nC-h49"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bT6-gq-iLv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -598,9 +579,6 @@
             <point key="canvasLocation" x="765" y="-958"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="HFI-Bq-gSG"/>
-    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="buX-lL-1BH"/>
     </inferredMetricsTieBreakers>
@@ -610,6 +588,9 @@
         <image name="globe" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
