@@ -107,6 +107,11 @@ const Home = () => {
                       ? enable
                       : disabled
                   }
+                  onClick={() => {
+                    if (!ownedNFTs[k] && prices[k] <= count) {
+                      mintFirstNFT(k);
+                    }
+                  }}
                 >
                   {ownedNFTs[k]
                     ? "Claimed!"
