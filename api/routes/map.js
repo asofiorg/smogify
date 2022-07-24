@@ -11,6 +11,7 @@ router.get("/", async (_, res) => {
 
     return res.status(200).send(query);
   } catch (e) {
+    console.error(e);
     return res.status(500).send({ e });
   }
 });

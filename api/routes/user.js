@@ -22,6 +22,7 @@ router.get("/:uuid", async (req, res) => {
       ? res.status(404).send({ error: "User not found" })
       : res.status(200).send(query[0]);
   } catch (e) {
+    console.error(e);
     return res.status(500).send({ e });
   }
 });
