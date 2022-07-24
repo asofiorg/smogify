@@ -16,15 +16,17 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataManaging.delegate = self
-        dot()
+        DispatchQueue.main.async {
+            self.dataManaging.delegate = self
+            self.dot()
+        }
+        
         
         
     }
     func dot(){
-        DispatchQueue.main.async {
             self.dataManaging.fetchData()
-        }
+        
     }
     
     
@@ -43,11 +45,8 @@ extension MapViewController: DataManagingDelegate{
     }
     
     func didFailWithError(error: Error) {
-        print("hi2")
-        let alert = UIAlertController(title: "You are probably offline", message: "Connect to the internet to load map data", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-                
-                present(alert, animated: true, completion: nil)
+        print("sh")
+
                 print("THE ERROR IS: \(error)")
     }
     

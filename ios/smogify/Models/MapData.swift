@@ -9,14 +9,14 @@ import Foundation
 
 struct MapData: Codable{
     let type: String
-//    let features: Feature
+    let features: [Feature]
     
 }
 
 //
 struct Feature: Codable{
     let type: String
-    let geometry: Geometry //single?
+//    let geometry: Geometry //single?
 
 }
 
