@@ -52,7 +52,7 @@ const App = () => {
   }
 
   return (
-    <main className="flex flex-col items-center justify-evenly min-h-full">
+    <main className="flex flex-col items-center justify-evenly min-h-screen">
       <h1 className="text-6xl text-center">Welcome!</h1>
       <p className="text-2xl text-center mx-6 -mt-20">
         We generate a wallet for you using your email
