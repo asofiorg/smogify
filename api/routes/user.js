@@ -13,6 +13,9 @@ router.get("/:uuid", async (req, res) => {
       where: {
         uuid,
       },
+      include: {
+        reports: true,
+      },
     });
 
     return query.length === 0
@@ -27,6 +30,16 @@ router.post("/", async (req, res) => {
   try {
     const { uuid, name } = req.body;
 
+    const isUser = await prisma.user.count({
+      where: {
+        uuid,
+      },
+    });
+
+    if (isUser > 0) {
+      return res.status(200).send({ message: "User already exists" });
+    }
+
     const query = await prisma.user.create({
       data: {
         uuid,
@@ -34,8 +47,17 @@ router.post("/", async (req, res) => {
       },
     });
 
+    query.count = await prisma.report.count({
+      where: {
+        user: {
+          uuid,
+        },
+      },
+    });
+
     return res.status(201).send(query);
   } catch (e) {
+    console.log(e);
     return res.status(500).send({ e });
   }
 });

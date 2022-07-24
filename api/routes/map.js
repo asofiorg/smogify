@@ -23,7 +23,6 @@ router.post("/", async (req, res) => {
       data: {
         lat,
         lng,
-        uuid,
         smog,
         user: {
           connect: {
@@ -35,6 +34,7 @@ router.post("/", async (req, res) => {
 
     return res.status(201).send(query);
   } catch (e) {
+    console.error(e);
     return res.status(500).send({ e });
   }
 });

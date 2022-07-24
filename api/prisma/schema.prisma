@@ -13,7 +13,7 @@ model Report {
     lng       Float
     smog      Boolean
     uuid      String
-    User      User     @relation(fields: [uuid], references: [uuid])
+    user      User     @relation(fields: [uuid], references: [uuid])
     createdAt DateTime @default(now())
 }
 

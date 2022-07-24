@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Uber;
+  src: url("/fonts/UberMoveMedium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Uber;
+  font-weight: bold;
+  src: url("/fonts/UberMoveBold.otf") format("opentype");
+}
+
+.max {
+  width: 25rem;
+  height: 43rem;
+  max-width: 25rem;
+  max-height: 43rem;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}

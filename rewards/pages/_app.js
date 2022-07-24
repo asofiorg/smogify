@@ -1,0 +1,27 @@
+import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
+
+import "../styles/global.css";
+
+const App = ({ Component, pageProps }) => {
+  return (
+    <ThirdwebProvider
+      desiredChainId={ChainId.Goerli}
+      walletConnectors={[
+        {
+          name: "magic",
+          options: {
+            apiKey: "pk_live_22F92AC44726E6DA",
+          },
+        },
+      ]}
+    >
+      <div className="flex items-center justify-center h-screen">
+        <div className="max border rounded-xl shadow-xl">
+          <Component {...pageProps} />
+        </div>
+      </div>
+    </ThirdwebProvider>
+  );
+};
+
+export default App;

@@ -16,7 +16,7 @@ const schema = {
       "The API documentation for the Smogify API, project submitted for Uber Global Hackathon",
     version: "1.0.0",
   },
-  schemes: ["https"],
+  schemes: ["https", "HTTP"],
   consumes: ["application/json"],
   produces: ["application/json"],
   paths: {
@@ -41,15 +41,15 @@ const schema = {
                     type: "string",
                     description: "The unique identifier for the reporter",
                   },
-                  latitude: {
+                  lat: {
                     type: "number",
                     format: "float",
-                    description: "The latitude of the report",
+                    description: "The lat of the report",
                   },
-                  longitude: {
+                  lng: {
                     type: "number",
                     format: "float",
-                    description: "The longitude of the report",
+                    description: "The lng of the report",
                   },
                   smog: {
                     type: "boolean",
@@ -83,15 +83,15 @@ const schema = {
                   type: "string",
                   description: "The unique identifier for the reporter",
                 },
-                latitude: {
+                lat: {
                   type: "number",
-                  format: "float",
-                  description: "The latitude of the report",
+                  multipleOf: 0.000001,
+                  description: "The lat of the report",
                 },
-                longitude: {
+                lng: {
                   type: "number",
-                  format: "float",
-                  description: "The longitude of the report",
+                  multipleOf: 0.000001,
+                  description: "The lng of the report",
                 },
                 smog: {
                   type: "boolean",
@@ -102,7 +102,7 @@ const schema = {
           },
         ],
         responses: {
-          200: {
+          201: {
             description: "The created report",
             schema: {
               type: "object",
@@ -115,15 +115,15 @@ const schema = {
                   type: "string",
                   description: "The unique identifier for the reporter",
                 },
-                latitude: {
+                lat: {
                   type: "number",
                   format: "float",
-                  description: "The latitude of the report",
+                  description: "The lat of the report",
                 },
-                longitude: {
+                lng: {
                   type: "number",
                   format: "float",
-                  description: "The longitude of the report",
+                  description: "The lng of the report",
                 },
                 smog: {
                   type: "boolean",
@@ -180,6 +180,18 @@ const schema = {
             },
           },
           200: {
+            description: "The user is already created",
+            schema: {
+              type: "object",
+              properties: {
+                message: {
+                  type: "string",
+                  description: "The message to display",
+                },
+              },
+            },
+          },
+          201: {
             description: "The created user",
             schema: {
               type: "object",
@@ -251,6 +263,10 @@ const schema = {
                   type: "string",
                   description: "The unique identifier for the user",
                 },
+                count: {
+                  type: "number",
+                  description: "The number of reports the user has created",
+                },
                 createdAt: {
                   type: "string",
                   format: "date-time",
@@ -261,8 +277,7 @@ const schema = {
           },
         },
       },
-
-    }
+    },
   },
 };
 
