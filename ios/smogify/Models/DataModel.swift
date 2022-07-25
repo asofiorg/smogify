@@ -9,7 +9,7 @@ import Foundation
 
 struct DataModel{
 
-    var coordinates: [[Double]]
+    var uuid: String
     
     
 }

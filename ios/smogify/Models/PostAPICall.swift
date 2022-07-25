@@ -20,19 +20,86 @@ class PostCalls{
         self.lat = lat
         self.lng = lng
         self.smog = smog
+        self.doo()
         
     }
+    let dataURL = "https://ipapi.co/json"
+    
+    
+    
+    func doo(){
+        let urlString = dataURL
+        
+        performRequest(with: urlString)
+    }
+    
+    
+    
+    
+    
+    
+    func performRequest(with urlString: String){
+        
+        //fetches data and URL To create a URLSession, assign a task to the session and carry out the task.
+        
+        if let url = URL(string: urlString){
+            let session = URLSession(configuration: .default)
+            
+            
+            let task = session.dataTask(with: url) { (data, response, error) in
+                
+                if error != nil{
+                    print(error)
+                    return
+                }
+                
+                if let safeData = data{
+                    if let data =  self.parseJSON(safeData){
+                        
+                        self.uuid = data.uuid
+                        print("UUID IS: \(self.uuid)" )
+                        
+                    }
+                }
+                
+            }
+             task.resume()
+        }
+        
+    }
+    
+    func parseJSON(_ mapData: Foundation.Data) -> DataModel? {
+        print("???")
+        
+        let decoder = JSONDecoder()
+        do {
+            
+            
+            
+            
+                let decodedData = try decoder.decode(MapData.self, from: mapData)
+
+             
+            
+            
+            var ip = decodedData.ip
+            
+                
+            return DataModel(uuid: ip)
+            
+        }catch{
+            print("ERROR")
+            return nil
+        }
+    }
+    
+    
+    
     
     func apiCall(){
         
         
     
-        
-        
-        let dataURL = "https://ipapi.co/json"
-        
-        
-        
         
         
     

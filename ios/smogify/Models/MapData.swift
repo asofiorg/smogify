@@ -14,8 +14,7 @@ import Foundation
 
 
 struct MapData: Codable{
-    let type: String
-    let features: [Feature]
+    var ip: String
     
 }
 
