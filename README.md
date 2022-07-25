@@ -17,6 +17,8 @@
 
 ![Smogify](https://github.com/asofiorg/smogify/raw/main/assets/mockup.png)
 
+app in action: https://youtu.be/awJrP-sHb_I
+
 Under the growing uncertainty of climate change, and the threat it poses to the health of
 millions of people around the world exposed to the toxic levels of air pollution, _Smogify_ is a
 mobile app powered by computer vision able to identify the pollution level of public routes
