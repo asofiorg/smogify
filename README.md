@@ -1,6 +1,6 @@
 <div align="center">
 
-# UniquePost
+# Smogify
 
 **_Detecting smog using web3_**
 
@@ -15,7 +15,7 @@
 
 ## About The Project
 
-![UniquePost](https://github.com/asofiorg/uniquepost/raw/main/assets/mockup.png)
+![Smogify](https://github.com/asofiorg/smogify/raw/main/assets/mockup.png)
 
 Under the growing uncertainty of climate change, and the threat it poses to the health of
 millions of people around the world exposed to the toxic levels of air pollution, _Smogify_ is a
@@ -38,7 +38,7 @@ Cars that frequently go through polluted regions are likely polluting themselves
 
 Collecting this data can be extremely valuable because it provides statistically-prone pools to check for polluting cars. We believe it can also be highly valuable to public-health officials in identifying urban areas that suffer from vehicle contamination. Last but not least, we can add a layer of intelligence to GPS software: our goal shouldn’t just be to arrive in the shortest time possible, perhaps we want to avoid cancerogenous gasses as well.
 
-[Read more](https://github.com/asofiorg/uniquepost/raw/main/assets/whitepaper.pdf)
+[Read more](https://github.com/asofiorg/smogify/raw/main/assets/whitepaper.pdf)
 
 <p align="right"><a href="#top">Back to top 🔼</a></p>
 
