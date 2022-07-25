@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-smogify/Pods-smogify-artifacts.sh
+${PODS_ROOT}/MapboxCommon/MapboxCommon.xcframework
+${PODS_ROOT}/MapboxCoreMaps/MapboxCoreMaps.xcframework
+${PODS_ROOT}/MapboxMobileEvents/MapboxMobileEvents.xcframework
