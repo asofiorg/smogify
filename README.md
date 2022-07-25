@@ -2,7 +2,7 @@
 
 # Smogify
 
-**_Detecting smog using web3_**
+**_Detecting smog using ML and rewarding users with NFTs_**
 
 </div>
 
@@ -46,11 +46,11 @@ Collecting this data can be extremely valuable because it provides statistically
 
 ### AI Model
 
-Go to the AI folder in `/ai` and run the notebook
+Go to the AI folder in `/ai` and run the notebook.
 
-### Swift app
+### Swift App
 
-Go to the swift ap folder in `/ios` and open it in Xcode
+Go to the Swift app folder in `/ios` and open it in Xcode.
 
 ### API
 
@@ -113,7 +113,7 @@ $ cd rewards && yarn start
 
 - [Swift](https://swift.org/)
 - [Python](https://www.python.org/)
-- ´[Javascript](https://nodejs.org/)
+- [Javascript](https://nodejs.org/)
 - [SwiftUI](https://developer.apple.com/xcode/swiftui/)
 - [Tensorflow](https://www.tensorflow.org/)
 - [CoreML](https://developer.apple.com/documentation/coreml)
