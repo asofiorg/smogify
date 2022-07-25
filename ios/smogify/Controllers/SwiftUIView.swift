@@ -48,9 +48,7 @@ struct ContentView: View {
                 Circle()
                     .strokeBorder(.red, lineWidth: 4)
                     .frame(width: 40, height: 40)
-                Circle()
-                    .foregroundColor(.blue)
-                    .frame(width: 80, height: 80)
+                
                     
             
                     
@@ -90,7 +88,7 @@ final class ContentViewModel: NSObject, ObservableObject, CLLocationManagerDeleg
     
     
     
-    var dataManaging = DataManaging()
+ 
     var coordinates: [CLLocationCoordinate2D]?
 
     var locationManager: CLLocationManager?
@@ -98,10 +96,7 @@ final class ContentViewModel: NSObject, ObservableObject, CLLocationManagerDeleg
     func checkIfLocationServicesIsEnabled(){
         
         
-        DispatchQueue.main.async {
-            self.dataManaging.delegate = self
-            self.dataManaging.fetchData()
-        }
+   
         
         if CLLocationManager.locationServicesEnabled(){
             locationManager = CLLocationManager()
@@ -140,27 +135,3 @@ final class ContentViewModel: NSObject, ObservableObject, CLLocationManagerDeleg
 
 
 }
-
-extension ContentViewModel: DataManagingDelegate{
-    func didUpdateData(_ dataManaging: DataManaging, data: DataModel) {
-        print("hi")
-        for coord in data.coordinates{
-//            print(coord)
-            self.coordinates?.append(CLLocationCoordinate2D(latitude: coord[0], longitude: coord[1]))
-            print("Coordinate{\(coord[0])º , \(coord[1])º}")
-        }
-    }
-    
-    func didFailWithError(error: Error) {
-
-            print("sh")
-
-                    print("THE ERROR IS: \(error)")
-    }
-    
-    
-    
-}
-
-
-

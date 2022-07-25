@@ -10,6 +10,6 @@ import Foundation
 struct DataModelW{
 
     var coordinates: [[Double]]
-    
+    var entries: Int
 }
 

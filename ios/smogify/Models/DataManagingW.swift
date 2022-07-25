@@ -56,18 +56,23 @@ struct DataManagingW{
         
     }
     func parseJSON(_ reportData: Foundation.Data) -> DataModelW? {
-        print("???")
+
         
         let decoder = JSONDecoder()
         do {
             
-            var theData = DataModelW(coordinates: [[]])
-            
-            
+            var theData = DataModelW(coordinates: [[]], entries: 0)
+            var coordinate: [Double] = []
+            var entriesF: Int = 0
             let decodedData = try decoder.decode([ReportData].self, from: reportData)
-
-
-
+            theData.coordinates.removeAll()
+            for entry in decodedData{
+                entriesF+=1
+                coordinate = [entry.lat, entry.lng]
+                theData.coordinates.append(coordinate)
+                print(coordinate)
+            }
+            theData.entries = entriesF
             return theData
             
         }catch{

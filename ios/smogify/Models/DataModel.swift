@@ -11,5 +11,6 @@ struct DataModel{
 
     var coordinates: [[Double]]
     
+    
 }
 

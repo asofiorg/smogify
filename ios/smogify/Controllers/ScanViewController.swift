@@ -14,9 +14,13 @@ import CoreLocation
 
 
 class ScanViewController: UIViewController, SCNSceneRendererDelegate, ARSCNViewDelegate, ARSessionDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
-  
+    
+    
+    let postMaker = PostCalls(lat: 0, lng: 0, smog: false)
+
 
     var locationManager: CLLocationManager?
+    var userLocation: CLLocationCoordinate2D?
 //    var circle: CircleData?
 //    scene view items
     @IBOutlet weak var sceneView: ARSCNView!
@@ -35,7 +39,7 @@ class ScanViewController: UIViewController, SCNSceneRendererDelegate, ARSCNViewD
         super.viewDidLoad()
         sceneView.isHidden = true
         lockedView.isHidden = true
-        
+        self.checkIfLocationServicesIsEnabled()
         
     }
     
@@ -178,7 +182,7 @@ class ScanViewController: UIViewController, SCNSceneRendererDelegate, ARSCNViewD
     }
     
     
-    let currentMLModel = TBD_Final().model
+    let currentMLModel = SmogDetector().model
     private let serialQueue = DispatchQueue(label: "com.ajapps.dispatchqueueml")
     private var visionRequests = [VNRequest]()
     private var timer = Timer()
@@ -248,7 +252,7 @@ extension ScanViewController {
             
             
             
-                DispatchQueue.main.async {
+            DispatchQueue.main.async { [self] in
         //            very handy later on for displaying confidence
                     let prediction_label = self.view.viewWithTag(101) as? UILabel
                     prediction_label!.text = classifications
@@ -260,10 +264,13 @@ extension ScanViewController {
                     
                     //prone to errors
                     
-                    if (topPredictionScore > 0.95) && (topPredictionName != "no_product_detected"){
+                    if (topPredictionScore > 0.95) && (topPredictionName != "clear"){
                         
                         
-//                            location all
+                        self.postMaker.smog = true
+                        self.postMaker.lat = userLocation!.latitude
+                        self.postMaker.lng = userLocation!.longitude
+                        self.postMaker.apiCall()
                         
                         
                             
@@ -321,13 +328,17 @@ extension ScanViewController: CLLocationManagerDelegate{
         case .denied:
             print("denied")
         case .authorizedAlways, .authorizedWhenInUse:
-            print("yay")
+            userLocation = locationManager.location?.coordinate
 //            circle?.lat = locationManager.location?.coordinate.latitude
 //            circle?.lon = locationManager.location?.coordinate.longitude
 
         @unknown default:
             break
         }
+    }
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        checkLocationAuthorization()
     }
     
     

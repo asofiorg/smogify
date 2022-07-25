@@ -305,8 +305,9 @@
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJD-ap-hsu">
                                 <rect key="frame" x="122" y="781" width="164" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="UberMove-Medium" family="Uber Move" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="backgroundColor" red="0.34509803919999998" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="UberMove-Medium" family="Uber Move" pointSize="32"/>
+                                <color key="textColor" red="0.32677710059999998" green="0.76119178529999998" blue="0.16885486250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="am3-dy-Gje">
@@ -321,8 +322,9 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="Add wallet">
+                                                <fragment content="Let's Scan">
                                                     <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         <font key="NSFont" size="14" name="UberMove-Medium"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
@@ -495,9 +497,9 @@
                         <color key="selectedImageTintColor" red="0.34543687109999999" green="0.001463797526" blue="0.99970442059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Sof-LI-paW" kind="relationship" relationship="viewControllers" id="GOa-lR-5dr"/>
-                        <segue destination="jkE-TA-acg" kind="relationship" relationship="viewControllers" id="lH2-Mu-G1X"/>
                         <segue destination="ItP-0o-YJf" kind="relationship" relationship="viewControllers" id="TcM-vs-H8K"/>
+                        <segue destination="jkE-TA-acg" kind="relationship" relationship="viewControllers" id="lH2-Mu-G1X"/>
+                        <segue destination="Sof-LI-paW" kind="relationship" relationship="viewControllers" id="GOa-lR-5dr"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s98-Ms-aBI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -16,24 +16,26 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
     
-    var dataManaging = DataManaging()
+    var dataManagingW = DataManagingW()
     var coordinates: [CLLocationCoordinate2D]?
     var locationManager: CLLocationManager?
     var userLocation: CLLocationCoordinate2D?
-    
-    var annotationsN = [Spot(coordinate: CLLocationCoordinate2D(latitude: 40, longitude: 40))]
+    var contentView: ContentView?
+    var annotationsN = [Spot(coordinate: CLLocationCoordinate2D(latitude: 40.7, longitude: 74))]
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.async {
-            self.dataManaging.delegate = self
-            self.dot()
-        }
+        
+        
+            self.dataManagingW.delegate = self
+            dot()
+        
         
         
     
     }
     
     @IBSegueAction func segueToHostingController(_ coder: NSCoder) -> UIViewController? {
+        
        
         let contentView = ContentView(annotations: annotationsN)
         
@@ -43,7 +45,7 @@ class MapViewController: UIViewController {
     
     
     func dot(){
-            self.dataManaging.fetchData()
+            self.dataManagingW.fetchData()
         
     }
     
@@ -56,17 +58,14 @@ class MapViewController: UIViewController {
 }
 
 
-extension MapViewController: DataManagingDelegate{
-    func didUpdateData(_ dataManaging: DataManaging, data: DataModel) {
+extension MapViewController: DataManagingWDelegate{
+    func didUpdateData(_ dataManaging: DataManagingW, data: DataModelW) {
         print("hi")
-        self.annotationsN = []
-        for coord in data.coordinates{
-//            print(coord)
-            
-            self.annotationsN.append(Spot(coordinate: CLLocationCoordinate2D(latitude: coord[0], longitude: coord[1])))
-            
-            print("Coordinate{\(coord[0])º , \(coord[1])º}")
+        self.annotationsN.removeAll()
+        for coor in data.coordinates{
+            self.annotationsN.append(Spot(coordinate: CLLocationCoordinate2D(latitude: coor[0], longitude: coor[1])))
         }
+        contentView = ContentView(annotations: self.annotationsN)
     }
     
     func didFailWithError(error: Error) {
