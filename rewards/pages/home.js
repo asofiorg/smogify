@@ -45,7 +45,10 @@ const Home = () => {
 
   const { data } = useSWR(
     `https://smogify.up.railway.app/user/${ip?.data?.ip}`,
-    fetcher
+    fetcher,
+    {
+      refreshInterval: 2,
+    }
   );
 
   const mintFirstNFT = (id) => {
